@@ -220,3 +220,11 @@ http://127.0.0.1:8000/docs
 ## Conclusion
 
 The project demonstrates an end-to-end offline RAG support-assistant pipeline consisting of document ingestion, semantic retrieval, intent routing, controlled response generation, source tracking, and REST API deployment.
+## Project Status
+
+The support assistant implements document ingestion, local embeddings, ChromaDB retrieval, intent routing with LangGraph, and a FastAPI interface.
+## Modules
+
+- Q1: Data pipeline and database processing
+- Q2: Analytics and predictive modelling
+- Q3: Offline support assistant with retrieval and API serving

@@ -1,0 +1,23 @@
+import sqlite3
+import pandas as pd
+
+conn = sqlite3.connect("books.db")
+
+books_df = pd.read_sql("SELECT * FROM books", conn)
+categories_df = pd.read_sql("SELECT * FROM categories", conn)
+
+merged_df = pd.merge(
+    books_df,
+    categories_df,
+    on="category_id",
+    how="inner"
+)
+
+result = merged_df[
+    ["title", "category_name", "price_gbp"]
+].head(10)
+
+print("Pandas JOIN result:")
+print(result)
+
+conn.close()
